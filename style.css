@@ -1,0 +1,30 @@
+body {
+  background: #000a24;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  animation-name: swing;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation-iteration-count: infinite;
+  background: radial-gradient(circle at 65% 15%, white 1px, #00ddff 3%, #002079 60%, #00ddff 100%);  
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: translateX(0)
+  }
+  50% {
+    transform: translateX(300px)
+  }
+}

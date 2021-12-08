@@ -1,3 +1,7 @@
+:root {
+  --duration: 0;
+}
+
 body {
   background: #000a24;
 }
@@ -10,21 +14,19 @@ body {
 }
 
 .ball {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  border-radius: 50% / 50%;
   background: white;
   animation-name: swing;
-  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation-timing-function: cubic-bezier(0.5, 0.05, 0.5, 1);
   animation-iteration-count: infinite;
-  background: radial-gradient(circle at 65% 15%, white 1px, #00ddff 3%, #002079 60%, #00ddff 100%);  
+  background: radial-gradient(circle at 26% 68%, white 1px, #f8f547 3%, #473a00 63%, #f8f547 125%)
 }
 
 @keyframes swing {
   0%, 100% {
-    transform: translateX(0)
+    transform: translateX(-150px) rotate(0deg)
   }
   50% {
-    transform: translateX(300px)
+    transform: translateX(150px) rotate(360deg)
   }
 }

@@ -1,7 +1,3 @@
-:root {
-  --duration: 0;
-}
-
 body {
   background: #000a24;
 }
@@ -12,10 +8,6 @@ body {
   justify-content: center;
   height: 100vh;
 }
-
-/* .container {
-  opacity: 0; 
-} */
 
 .ball {
   border-radius: 50% / 50%;

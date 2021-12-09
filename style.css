@@ -15,7 +15,12 @@ body {
   animation-timing-function: cubic-bezier(0.5, 0.05, 0.5, 1), ease-in;
   animation-iteration-count: infinite, 1;
   animation-fill-mode: forwards, forwards;
-  background: radial-gradient(circle at 26% 68%, white 1px, #f8f547 3%, #473a00 63%, #f8f547 125%);
+  background: radial-gradient(circle at 26% 68%, 
+    white 1px,
+    #fffc44 3%, 
+    #634800 63%, 
+    #fffc44 125%
+  );
   opacity: 0; 
 }
 
@@ -24,7 +29,7 @@ body {
     transform: translateX(-150px) rotate(0deg) scale(1)
   }
   50% {
-    transform: translateX(150px) rotate(360deg) scale(3)
+    transform: translateX(150px) rotate(180deg) scale(2)
   }
 }
 

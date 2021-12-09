@@ -21,10 +21,10 @@ body {
 
 @keyframes swing {
   0%, 100% {
-    transform: translateX(-150px) rotate(0deg)
+    transform: translateX(-150px) rotate(0deg) scale(1)
   }
   50% {
-    transform: translateX(150px) rotate(360deg)
+    transform: translateX(150px) rotate(360deg) scale(3)
   }
 }
 

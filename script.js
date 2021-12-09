@@ -1,8 +1,8 @@
 const $ = (elem) => document.querySelector(elem);
 const $$ = (elem) => document.querySelectorAll(elem);
 
-const totalBalls = 20;
-const ballSize = 20;
+const totalBalls = 25;
+const ballSize = 15;
 
 let movement = Number($('#movement').value);
 let duration = Number($('#duration').value);

@@ -11,7 +11,7 @@ $('#span').value = span;
 const totalBalls = 30;
 const ballSize = 15;
 let movement = Number($('#movement').value);
-let duration = 4;
+let duration = 5;
 let count = 0;
 let inc;
 

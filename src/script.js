@@ -1,11 +1,17 @@
 const $ = (elem) => document.querySelector(elem);
 const $$ = (elem) => document.querySelectorAll(elem);
+const getCssValue = (prop) => getComputedStyle($('html')).getPropertyValue(prop).trim();
+
+let scale = getCssValue('--global-scale');
+$('#scale').value = scale;
+
+let span = getCssValue('--global-span');
+$('#span').value = span;
 
 const totalBalls = 30;
 const ballSize = 15;
-
 let movement = Number($('#movement').value);
-let duration = Number($('#duration').value);
+let duration = 4;
 let count = 0;
 let inc;
 
@@ -49,7 +55,13 @@ $('#movement').addEventListener('input', e => {
   updateAnimation();
 });
 
-$('#duration').addEventListener('input', e => {
-  duration = Number(e.target.value);
-  updateAnimation();
+$('#scale').addEventListener('input', e => {
+  scale = Number(e.target.value);
+  $('html').style.setProperty('--global-scale', scale);
 });
+
+$('#span').addEventListener('input', e => {
+  span = Number(e.target.value);
+  $('html').style.setProperty('--global-span', span);
+});
+

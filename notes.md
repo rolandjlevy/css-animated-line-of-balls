@@ -14,3 +14,9 @@
 
 ```js
   animation-delay: ${inc}s;
+
+  $('#duration').addEventListener('input', e => {
+    duration = Number(e.target.value);
+    updateAnimation();
+  });
+```

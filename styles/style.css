@@ -1,0 +1,58 @@
+:root {
+  --global-scale: 5;
+  --global-span: 150;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #00081d;
+  color: var(--mid);
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+
+.ball {
+  border-radius: 50% / 50%;
+  animation-name: swing, fadeInAnimation;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 0.5, 1), ease-in;
+  animation-iteration-count: infinite, 1;
+  animation-fill-mode: forwards, forwards;
+  --scale: calc(var(--global-scale));
+  --span: calc(var(--global-span) * 1px);
+  opacity: 0;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: translateX(calc(var(--span) * -1)) rotate(0deg) scale(1);
+  }
+  50% {    
+    --scale: calc(var(--global-scale));
+    transform: translateX(calc(var(--span) * 1)) rotate(360deg) scale(var(--scale));
+  }
+}
+
+@keyframes fadeInAnimation { 
+  0% { opacity: 0; } 
+  100% { opacity: 1; } 
+} 
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.m-t-30 {
+  margin-top: 30px;
+}
+
+.m-t-40 {
+  margin-top: 40px;
+}

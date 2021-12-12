@@ -26,7 +26,7 @@ const getBackground = (hue) => {
 while (count++ < totalBalls) {
   inc = count * movement / 250;
   const ball = document.createElement('div');
-  const background = getBackground(60 + count * 10);
+  const background = getBackground(60 + count * 7);
   const options = {
     id: count,
     className: 'ball',

@@ -5,28 +5,30 @@ const getCssValue = (prop) => getComputedStyle($('html')).getPropertyValue(prop)
 let scale = getCssValue('--global-scale');
 $('#scale').value = scale;
 
+if (window.innerWidth < 400) $('#span').max = 150;
 let span = getCssValue('--global-span');
 $('#span').value = span;
 
+let duration = getCssValue('--global-duration');
+
+let curve = Number($('#curve').value);
+
 const totalBalls = 30;
 const ballSize = 15;
-let movement = Number($('#movement').value);
-let duration = 5;
 let count = 0;
-let inc;
 
 const getBackground = (hue) => {
   return `radial-gradient(circle at 25% 70%, 
-    hsl(${hue}, 100%, 60%) 5%, 
+    hsl(${hue}, 100%, 70%) 5%, 
     hsl(${hue - 20}, 100%, 20%) 65%, 
-    hsl(${hue}, 100%, 60%) 125%
+    hsl(${hue}, 100%, 70%) 125%
   )`;
 }
 
 while (count++ < totalBalls) {
-  inc = count * movement / 250;
+  const inc = count * curve / 250;
   const ball = document.createElement('div');
-  const background = getBackground(60 + count * 7);
+  const background = getBackground(40 + count * 7);
   const options = {
     id: count,
     className: 'ball',
@@ -42,17 +44,13 @@ while (count++ < totalBalls) {
   $('.container').appendChild(ball);
 }
  
-const updateAnimation = () => {
-  $$('.ball').forEach((ball, index) => {
-    inc = (index + 1) * movement / 250;
-    ball.style.animationDelay = `${inc}s`;
-    ball.style.animationDuration = `${duration}s`;
-  });
-}
 
-$('#movement').addEventListener('input', e => {
-  movement = Number(e.target.value);
-  updateAnimation();
+$('#curve').addEventListener('input', e => {
+  curve = Number(e.target.value);
+  $$('.ball').forEach((ball, index) => {
+    const inc = (index + 1) * curve / 250;
+    ball.style.animationDelay = `${inc}s`;
+  });
 });
 
 $('#scale').addEventListener('input', e => {

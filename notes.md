@@ -1,6 +1,7 @@
 # Notes
 
 - sphere in CSS: https://codepen.io/vikas78/pen/vYEymWd
+- CSS vars: https://vanseodesign.com/css/custom-properties-and-animations/
 
 ```css
   background: radial-gradient(circle at 65% 15%, white 1px, #ebff36 3%, #324700 60%, #ebff36 100%);

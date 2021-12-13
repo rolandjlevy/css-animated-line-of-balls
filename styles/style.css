@@ -1,6 +1,7 @@
 :root {
-  --global-scale: 7;
-  --global-span: 150;
+  --global-scale: 6;
+  --global-span: 100;
+  --global-duration: 4;
 }
 
 body {
@@ -48,10 +49,17 @@ body {
 header.about {
   position: absolute;
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 600;
   top: 20px;
   right: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+  header.about {
+    top: auto;
+    bottom: 20px;
+  }
 }
 
 header.about > a {
@@ -68,7 +76,7 @@ header.about > a:hover {
 .new-tab-icon::after {
   font-family: "Font Awesome 5 Free"; 
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 1rem;
   content: "\f35d";
   margin-left: 10px;
 }

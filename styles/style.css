@@ -37,7 +37,7 @@ body {
   }
   50% {    
     --scale: calc(var(--global-scale));
-    transform: translateX(calc(var(--span) * 1)) rotate(360deg) scale(var(--scale));
+    transform: translateX(calc(var(--span) * 1)) rotate(180deg) scale(var(--scale));
   }
 }
 

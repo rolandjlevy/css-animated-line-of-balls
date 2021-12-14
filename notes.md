@@ -1,5 +1,15 @@
 # Notes
 
+### To do
+
+- Add wireframe toggle with these properties:
+
+```css
+  background: #ffffff33 !important;
+  border: 1px solid #ffffff66;
+  border-radius: 0;
+```
+
 - sphere in CSS: https://codepen.io/vikas78/pen/vYEymWd
 - CSS vars: https://vanseodesign.com/css/custom-properties-and-animations/
 

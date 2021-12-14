@@ -4,4 +4,4 @@
 
 - [Live demo](https://css-animated-line-of-balls.rolandjlevy.repl.co/)
 - [Source code](https://replit.com/@RolandJLevy/css-animated-line-of-balls#README.md)
-- [Github repo]()
+- [Github repo](https://github.com/rolandjlevy/css-animated-line-of-balls)

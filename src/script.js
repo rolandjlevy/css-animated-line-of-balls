@@ -18,6 +18,8 @@ const ballSize = getCssValue('--ballSize');
 const aspectRatio = getCssValue('--aspect-ratio');
 let count = 0;
 
+console.log({duration, curve, scale, span})
+
 const getBackground = (hue) => {
   return `radial-gradient(circle at 25% 70%, 
     hsl(${hue}, 100%, 70%) 5%, 

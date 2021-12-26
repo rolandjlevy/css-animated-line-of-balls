@@ -13,7 +13,7 @@ let duration = getCssValue('--global-duration');
 
 let curve = Number($('#curve').value);
 
-const totalBalls = 25;
+const totalBalls = 20;
 const ballSize = getCssValue('--ballSize');
 const aspectRatio = getCssValue('--aspect-ratio');
 let count = 0;
@@ -31,7 +31,7 @@ const getBackground = (hue) => {
 while (count++ < totalBalls) {
   const inc = count * curve / 250;
   const ball = document.createElement('div');
-  const background = getBackground(60 + count * 6);
+  const background = getBackground(60 + count * 8);
   const options = {
     id: count,
     className: 'ball',

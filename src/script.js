@@ -13,8 +13,9 @@ let duration = getCssValue('--global-duration');
 
 let curve = Number($('#curve').value);
 
-const totalBalls = 30;
-const ballSize = 15;
+const totalBalls = 25;
+const ballSize = getCssValue('--ballSize');
+const aspectRatio = getCssValue('--aspect-ratio');
 let count = 0;
 
 const getBackground = (hue) => {
@@ -33,8 +34,8 @@ while (count++ < totalBalls) {
     id: count,
     className: 'ball',
     style: `
-      width: ${ballSize}px;
-      height: ${ballSize * 1.25}px;
+      width: ${Number(ballSize)}px;
+      height: ${Number(ballSize) * aspectRatio}px;
       animation-delay: ${inc}s;
       animation-duration: ${duration}s;
       background: ${background};
@@ -63,3 +64,6 @@ $('#span').addEventListener('input', e => {
   $('html').style.setProperty('--global-span', span);
 });
 
+$('#toggler').addEventListener('click', e => {
+  $('.container').classList.toggle('wireframe');
+});

@@ -3,9 +3,7 @@
   --light-mid: hsl(260, 18%, 80%);
   --mid: hsl(260, 18%, 70%);
   --dark: hsl(260, 10%, 40%);
-  --deep: hsl(260, 10%, 20%);
-  --black: hsl(260, 10%, 5%);
-  --slider-width: 100px;
+  --slider-width: 80px;
   --slider-offset: calc(50px / 2); /* label width/2 */
   --control-size: 20px;
 }
